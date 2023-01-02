@@ -1,7 +1,7 @@
 import TaskCard from './TaskCard'
 
 // ↓↓Agrego task estructurado {}
-function TaskList({task}) {
+function TaskList({task, deleteTask}) {
     
 
   if(task.length === 0){
@@ -11,7 +11,7 @@ function TaskList({task}) {
 return (
   <div>
     {task.map((task) => (
-      <TaskCard key={task.id} task={task} />   
+      <TaskCard key={task.id} task={task} deleteTask={deleteTask} />   
       
     ))}
   </div>

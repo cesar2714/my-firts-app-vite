@@ -29,11 +29,16 @@ function createTask (data) {
   }])
 }
 
+function deleteTask (taskId) {
+  setTask(task.filter(task => task.id !== taskId)
+  )
+}
+
 //↑↑↑
   return (
     <div>
       <TaskForm createTask={createTask} />
-      <TaskList task={task}/>
+      <TaskList task={task} deleteTask={deleteTask}/>
     </div>
   )
 }
